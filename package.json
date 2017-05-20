@@ -1,0 +1,15 @@
+{
+  "name": "twitchTv",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meroshan/twitchTv.git"
+  },
+  "keywords": [],
+  "author": "Roshan Chamlagai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meroshan/twitchTv/issues"
+  },
+  "homepage": "https://github.com/meroshan/twitchTv#readme"
+}
