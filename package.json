@@ -11,5 +11,10 @@
   "bugs": {
     "url": "https://github.com/meroshan/twitchTv/issues"
   },
-  "homepage": "https://github.com/meroshan/twitchTv#readme"
+  "homepage": "https://github.com/meroshan/twitchTv#readme",
+  "dependencies": {
+    "jquery": "^3.2",
+    "bootstrap": "^3.3"
+  }
+
 }
