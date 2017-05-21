@@ -1,9 +1,42 @@
 
+*
+{
+	margin: 0px auto;
+	padding: 0px;	
+}
+
 .app-heading
 {
+	color:white;
 	text-align:center;
 	background-color:purple;
-	color:white;
 	border-radius: 0px;
+	border:0px;
 	font-family: monospace, serif, verdana;
+	margin-bottom: 0px;
+}
+
+.status
+{
+	text-align: center;
+	color: purple;
+	padding:10px;	
+}
+
+#all 
+{
+	color:white;
+	background-color:#1A237E;
+
+}
+#online 
+{
+	color:white;
+	background-color:#004D40;
+}
+
+#offline
+{
+	color:white;
+	background-color:#880E4F;
 }
