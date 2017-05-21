@@ -1,0 +1,9 @@
+
+.app-heading
+{
+	text-align:center;
+	background-color:purple;
+	color:white;
+	border-radius: 0px;
+	font-family: monospace, serif, verdana;
+}
