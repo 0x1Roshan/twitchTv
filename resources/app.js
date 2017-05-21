@@ -8,7 +8,24 @@ $( document ).ready( function() {
 			dataType: 'jsonp',
 			success: function( response ) {
 				console.log(response);
+				putContent( streamer, response );
 			}
 		});
 	});
 });
+
+function putContent( streamer, response )
+{
+	var status;
+	var html;
+
+	if ( response.stream == null ) {
+		status = "offline";
+	} else {
+		status = "online";
+	} 
+
+	html = "<p>" + streamer + status + "</p>";
+
+	$("#list").append( html );
+}
