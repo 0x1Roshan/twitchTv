@@ -7,7 +7,6 @@ $( document ).ready( function() {
 			url: url,
 			dataType: 'jsonp',
 			success: function( response ) {
-				console.log(response);
 				putContent( streamer, response );
 			}
 		});
@@ -20,20 +19,30 @@ function putContent( streamer, response )
 	var html;
 	var cls;
 	var logo;
+	var name;
 
-	if ( response.stream == null ) {
+	if ( response.stream === null ) {
 		status = "offline";
 		cls = "alert alert-danger";
-		logo = "https://image.freepik.com/free-vector/old-television-set-icon_23-2147501665.jpg";
+		logo = "http://simpleicon.com/wp-content/uploads/tv.png";
+		name = streamer;
+
+		html = "<div class='row'>" +
+							"<div class='" + cls + "'>" +
+							"<img src='" + logo + "' class='img-rounded' height='50' width='50'/>" +
+							"<span>" + streamer + status + "</span>" +
+					 "</div>" ;
 	} else {
 		status = "online";
 		cls = "alert alert-success";
-		logo = response.channel.logo ;
-	} 
+		logo = response.stream.channel.logo;
+		name = response.channel ? response.channel.display_name : streamer;
 
-	html = "<div class='" + cls + "'>" +
-				"<img src='" + logo + "' height='50' width='50'/>" + 
-				"<p>" + streamer + status + "</p></div>" ;
+		html = "<div class='" + cls + "'>" +
+							"<img src='" + logo + "' class='img-rounded' height='50' width='50'/>" +
+							"<span>" + name + status + "</span>" +
+						+ "</div>" ;
+	}
 
 	$("#list").append( html );
 }
