@@ -19,18 +19,26 @@ $( "#all").on( "click", function( event ){
 
 		$( "#list" ).css( "background-color", "#1A237E");
 
+		$( ".alert-danger").show();
+		$( ".alert-success").show();
 });
 
 $( "#online").on( "click", function( event ){
 		event.preventDefault();
 
 		$( "#list" ).css( "background-color", "#004D40");
+
+		$( ".alert-danger").hide();
+		$( ".alert-success").show();
 });
 
 $( "#offline").on( "click", function( event ){
 		event.preventDefault();
 
 		$( "#list" ).css( "background-color", "#880E4F");
+
+		$( ".alert-success").hide();
+		$( ".alert-danger").show();
 });
 
 function putContent( streamer, response )
