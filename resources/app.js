@@ -14,6 +14,25 @@ $( document ).ready( function() {
 	});
 });
 
+$( "#all").on( "click", function( event ){
+		event.preventDefault();
+
+		$( "#list" ).css( "background-color", "#1A237E");
+
+});
+
+$( "#online").on( "click", function( event ){
+		event.preventDefault();
+
+		$( "#list" ).css( "background-color", "#004D40");
+});
+
+$( "#offline").on( "click", function( event ){
+		event.preventDefault();
+
+		$( "#list" ).css( "background-color", "#880E4F");
+});
+
 function putContent( streamer, response )
 {
 	var status;
