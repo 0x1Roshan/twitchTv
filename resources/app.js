@@ -27,22 +27,20 @@ function putContent( streamer, response )
 		logo = "http://simpleicon.com/wp-content/uploads/tv.png";
 		name = streamer;
 
-		html = "<div class='row'>" +
-							"<div class='" + cls + "'>" +
-							"<img src='" + logo + "' class='img-rounded' height='50' width='50'/>" +
-							"<span>" + streamer + status + "</span>" +
-					 "</div>" ;
 	} else {
 		status = "online";
 		cls = "alert alert-success";
 		logo = response.stream.channel.logo;
 		name = response.channel ? response.channel.display_name : streamer;
-
-		html = "<div class='" + cls + "'>" +
-							"<img src='" + logo + "' class='img-rounded' height='50' width='50'/>" +
-							"<span>" + name + status + "</span>" +
-						+ "</div>" ;
 	}
+
+	html = "<div class='row'>" +
+						"<div class='" + cls + "'>" +
+							"<div class='channel-img'><img src='" + logo + "' class='img-rounded'/></div>" +
+							"<div class='channel-name'>" + name + "</div><div class='channel-status'>"+ status + "</div>" +
+						"</div>" +
+					"</div>"  ;
+
 
 	$("#list").append( html );
 }

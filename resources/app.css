@@ -2,7 +2,7 @@
 *
 {
 	margin: 0px auto;
-	padding: 0px;	
+	padding: 0px;
 }
 
 .app-heading
@@ -20,18 +20,18 @@
 {
 	text-align: center;
 	color: purple;
-	padding:10px;	
+	padding:10px;
 	text-decoration: none;
 }
 
-#all 
+#all
 {
 	color:white;
 	background-color:#1A237E;
 	border-radius: 5px 0px 0px 0px;
 
 }
-#online 
+#online
 {
 	color:white;
 	background-color:#004D40;
@@ -42,4 +42,30 @@
 	color:white;
 	background-color:#880E4F;
 	border-radius: 0px 5px 0px 0px;
+}
+
+.alert
+{
+	padding: 44px;
+	padding-top: 20px;
+}
+img
+{
+	float:left;
+	height: 30px;
+	width: 60px;
+
+}
+
+.channel-name
+{
+	float:left;
+	margin-left: 100px;
+	padding-bottom:44px;
+}
+
+.channel-status
+{
+	float:right;
+	margin-right:40px;
 }
