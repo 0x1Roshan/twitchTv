@@ -7,6 +7,7 @@ $( document ).ready( function() {
 			url: url,
 			dataType: 'jsonp',
 			success: function( response ) {
+				// console.log(response);
 				putContent( streamer, response );
 			}
 		});
@@ -34,10 +35,12 @@ function putContent( streamer, response )
 		name = response.channel ? response.channel.display_name : streamer;
 	}
 
+	var channelUrl = "https://www.twitch.tv/" + streamer;
+
 	html = "<div class='row'>" +
 						"<div class='" + cls + "'>" +
 							"<div class='channel-img'><img src='" + logo + "' class='img-rounded'/></div>" +
-							"<div class='channel-name'>" + name + "</div><div class='channel-status'>"+ status + "</div>" +
+							"<div class='channel-name'>" + name + "</div><a href='" + channelUrl +"' target='_blank'><div class='channel-status'>"+ status + "</div></a>" +
 						"</div>" +
 					"</div>"  ;
 
