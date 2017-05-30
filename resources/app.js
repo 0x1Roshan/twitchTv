@@ -57,6 +57,13 @@ function putContent( streamer, response )
 		name = streamer;
 		description = "";
 
+	} else if ( response.stream === undefined ) {
+		status = "offline";
+		cls = "alert alert-danger";
+		logo = "http://simpleicon.com/wp-content/uploads/tv.png";
+		name = streamer;
+		description = "( Accound closed )";
+
 	} else {
 		status = "online";
 		cls = "alert alert-success";
