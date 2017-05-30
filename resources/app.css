@@ -67,7 +67,12 @@ img
 {
 	float:left;
 	margin-left: 100px;
+	width: 200px;
+	height: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	padding-bottom:44px;
+
 }
 
 .channel-status
